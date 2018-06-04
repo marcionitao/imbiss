@@ -1,14 +1,47 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Ionic SQLite Example
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-searchbar (ionInput)="filterProducts($event)" [(ngModel)]="searchText"></ion-searchbar>
+  <ion-list>
+    <ion-item-sliding *ngFor="let product of products">
+
+      <button ion-item (click)="editProduct(product.id)">
+        <h1>{{ product.name }}</h1>
+        <h2>{{ product.category_name }}</h2>
+        <h2>{{ product.duedate | date:'dd/MM/yyyy' }}</h2>
+        <h2 class="price">{{ product.price | currency:'EUR':true }}</h2>
+      </button>
+
+      <ion-item-options side="left">
+        <button ion-button color="danger" (click)="removeProduct(product)">
+          <ion-icon name="trash"></ion-icon>
+          Excluir
+        </button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="addProduct()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>Total: {{ products.length }}</p>
+    <ion-list>
+      <ion-item no-lines>
+        <ion-label>Listar inativos</ion-label>
+        <ion-toggle name="listarInativos" [(ngModel)]="onlyInactives" (ionChange)="getAllProducts()"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
+</ion-footer>
