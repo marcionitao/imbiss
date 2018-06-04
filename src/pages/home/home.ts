@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
+
 import { ProductProvider } from '../../providers/product/product'
 import { Product } from '../../model/product';
 
@@ -47,5 +48,5 @@ export class HomePage {
   filterProducts(ev: any) {
     this.getAllProducts();
   }
-  
+
 }
