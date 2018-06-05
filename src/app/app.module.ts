@@ -11,11 +11,13 @@ import { HomePage } from '../pages/home/home';
 import { DatabaseProvider } from '../providers/database/database';
 import { ProductProvider } from '../providers/product/product';
 import { CategoryProvider } from '../providers/category/category';
+import { EditProductPage } from '../pages/edit-product/edit-product';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    EditProductPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { CategoryProvider } from '../providers/category/category';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    EditProductPage
   ],
   providers: [
     StatusBar,                                                                              

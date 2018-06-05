@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SQLiteObject } from '@ionic-native/sqlite';
 import { DatabaseProvider } from '../database/database';
-import { Product } from '../../model/product';
 
 @Injectable()
 export class CategoryProvider {

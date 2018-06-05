@@ -4,6 +4,7 @@ import { NavController, ToastController } from 'ionic-angular';
 import { ProductProvider } from '../../providers/product/product'
 import { Product } from '../../model/product';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
