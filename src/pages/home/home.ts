@@ -35,7 +35,7 @@ export class HomePage {
   }
 
   editProduct(id: number) {
-    this.navCtrl.push('EditProductPage', { id: id });
+    this.navCtrl.push(EditProductPage, { id: id });
   }
 
   removeProduct(product: Product) {

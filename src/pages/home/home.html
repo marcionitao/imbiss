@@ -15,7 +15,7 @@
         <h1>{{ product.name }}</h1>
         <h2>{{ product.category_name }}</h2>
         <h2>{{ product.duedate | date:'dd/MM/yyyy' }}</h2>
-        <h2 class="price">{{ product.price | currency:'EUR':true }}</h2>
+        <h2 class="price">{{ product.price | currency:'EUR':code:'1.2-2' }}</h2>
       </button>
 
       <ion-item-options side="left">
@@ -29,11 +29,11 @@
   </ion-list>
 
   <ion-fab right bottom>
-    <button ion-fab color="light" (click)="addProduct()"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab color="danger" (click)="addProduct()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
 </ion-content>
-<!--
+
 <ion-footer>
   <ion-toolbar>
     <p>Total: {{ products.length }}</p>
@@ -45,4 +45,3 @@
     </ion-list>
   </ion-toolbar>
 </ion-footer>
--->
