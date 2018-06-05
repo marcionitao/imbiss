@@ -3,6 +3,7 @@ import { NavController, ToastController } from 'ionic-angular';
 
 import { ProductProvider } from '../../providers/product/product'
 import { Product } from '../../model/product';
+import { EditProductPage } from '../edit-product/edit-product';
 
 
 @Component({
@@ -29,7 +30,8 @@ export class HomePage {
   }
 
   addProduct() {
-    this.navCtrl.push('EditProductPage');
+    this.navCtrl.push(EditProductPage);
+    console.log('botão carregado!!!!');
   }
 
   editProduct(id: number) {
