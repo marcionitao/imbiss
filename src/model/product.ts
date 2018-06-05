@@ -5,4 +5,5 @@ export class Product {
     duedate: Date;
     active: boolean;
     category_id: number;
+    
   }
