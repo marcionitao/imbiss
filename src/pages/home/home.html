@@ -21,7 +21,7 @@
       <ion-item-options side="left">
         <button ion-button color="danger" (click)="removeProduct(product)">
           <ion-icon name="trash"></ion-icon>
-          Excluir
+          Delete
         </button>
       </ion-item-options>
 
@@ -39,7 +39,7 @@
     <p>Total: {{ products.length }}</p>
     <ion-list>
       <ion-item no-lines>
-        <ion-label>Listar inativos</ion-label>
+        <ion-label>Inactive Lst</ion-label>
         <ion-toggle name="listarInativos" [(ngModel)]="onlyInactives" (ionChange)="getAllProducts()"></ion-toggle>
       </ion-item>
     </ion-list>

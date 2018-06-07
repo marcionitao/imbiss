@@ -25,6 +25,7 @@ export class HomePage {
   getAllProducts() {
     this.productProvider.getAll(!this.onlyInactives, this.searchText)
       .then((result: any[]) => {
+        console.log('Conteudos : '+this.products);
         this.products = result;
       });
   }

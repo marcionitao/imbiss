@@ -50,9 +50,9 @@ export class DatabaseProvider {
 
         // Create tables
         db.sqlBatch([
-          ['insert into categories (name) values (?)', ['Hambúrgueres']],
-          ['insert into categories (name) values (?)', ['Bebidas']],
-          ['insert into categories (name) values (?)', ['Sobremesas']]
+          ['insert into categories (name) values (?)', ['Food']],
+          ['insert into categories (name) values (?)', ['Drinkes']],
+          ['insert into categories (name) values (?)', ['Dessert']],
         ])
           .then(() => console.log('Dados padrões incluídos'))
           .catch(e => console.error('Erro ao incluir dados padrões', e));
